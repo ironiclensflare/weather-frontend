@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './App.css'
+import WeatherForecastContainer from './WeatherForecastContainer'
 
 function App() {
   const [data, setData] = useState(null)
@@ -53,7 +54,7 @@ function App() {
         {data && !loading && !error && (
           <div className="data-container">
             <h2>API Response:</h2>
-            <pre>{JSON.stringify(data, null, 2)}</pre>
+            <WeatherForecastContainer forecasts={data} />
           </div>
         )}
       </main>
