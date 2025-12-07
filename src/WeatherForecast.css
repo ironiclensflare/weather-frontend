@@ -1,0 +1,16 @@
+.weather-forecast {
+  border: 1px solid #000000;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 8px 0;
+  background-color: #f9f9f9;
+}
+.temp-cold {
+  color: #1e90ff;
+}
+.temp-mild {
+  color: #ff8c00;
+}
+.temp-hot {
+  color: #ff4500;
+}

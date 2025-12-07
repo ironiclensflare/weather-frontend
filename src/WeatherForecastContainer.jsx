@@ -1,4 +1,5 @@
 import './WeatherForecastContainer.css'
+import WeatherForecast from './WeatherForecast'
 
 function WeatherForecastContainer({ forecasts }) {
   if (!forecasts || forecasts.length === 0) {
@@ -8,11 +9,7 @@ function WeatherForecastContainer({ forecasts }) {
   return (
     <div className="weather-forecast-container">
       {forecasts.map((forecast, index) => (
-        <div key={index} className="weather-forecast-item">
-            <h3>{forecast.date}</h3>
-            <p>Temperature: {forecast.temperatureC}°C / {forecast.temperatureF}°F</p>
-            <p>Summary: {forecast.summary}</p>
-        </div>
+        <WeatherForecast key={index} forecast={forecast} />
       ))}
     </div>
   )
