@@ -1,4 +1,4 @@
-import './WeatherForecastContainer.css'
+import '../css/WeatherForecastContainer.css'
 import WeatherForecast from './WeatherForecast'
 
 function WeatherForecastContainer({ forecasts }) {

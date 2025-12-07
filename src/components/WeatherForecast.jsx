@@ -1,4 +1,5 @@
-import './WeatherForecast.css'
+import '../css/WeatherForecast.css'
+
 function WeatherForecast({ forecast }) {
   let tempClass = (forecast.temperatureC > 25) ? 'hot' : (forecast.temperatureC < 10) ? 'cold' : 'mild';
   return (

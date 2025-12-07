@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import './App.css'
-import WeatherForecastContainer from './WeatherForecastContainer'
+import './css/App.css'
+import WeatherForecastContainer from './components/WeatherForecastContainer'
 
 function App() {
   const [data, setData] = useState(null)
