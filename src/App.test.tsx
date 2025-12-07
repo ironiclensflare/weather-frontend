@@ -36,9 +36,9 @@ describe('App', () => {
         temperatureF: 68,
         summary: 'Sunny'
       }
-    ]
+    ];
 
-    ;(globalThis.fetch as any).mockImplementationOnce(() =>
+    (globalThis.fetch as any).mockImplementationOnce(() =>
       Promise.resolve({
         ok: true,
         json: async () => mockData
@@ -56,7 +56,7 @@ describe('App', () => {
   })
 
   it('displays error message when fetch fails', async () => {
-    ;(globalThis.fetch as any).mockImplementationOnce(() =>
+    (globalThis.fetch as any).mockImplementationOnce(() =>
       Promise.resolve({
         ok: false,
         status: 500
@@ -73,7 +73,7 @@ describe('App', () => {
   })
 
   it('displays error message when network request fails', async () => {
-    ;(globalThis.fetch as any).mockImplementationOnce(() =>
+    (globalThis.fetch as any).mockImplementationOnce(() =>
       Promise.reject(new Error('Network error'))
     )
 
@@ -87,7 +87,7 @@ describe('App', () => {
   })
 
   it('fetches data from correct endpoint', () => {
-    ;(globalThis.fetch as any).mockImplementationOnce(() =>
+    (globalThis.fetch as any).mockImplementationOnce(() =>
       Promise.resolve({
         ok: true,
         json: async () => []
